@@ -13,10 +13,10 @@ class SSet:
     def __init__(self, fname):
         self.fname = fname
         self.root = SuffixTreeNode()
+        self.words = []
         self.load()
 
     def load(self):
-        self.words = []
         with open(self.fname, 'r') as f:
             for line in f:
                 word = line.rstrip()
